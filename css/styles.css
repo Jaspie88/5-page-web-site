@@ -18,14 +18,40 @@ li {
   list-style: none;
 }
 
+h1{
+  padding: 10px;
+  text-align: left;
+  font-family: "Notable";
+  font-size: 4rem;
+}
+
+h1:hover{
+ color: blueviolet; 
+}
+
+p {
+  padding: 10px;
+  text-align: center;
+  font-size: medium;
+}
+
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px - 30px);
+  width: 100%;
 }
 
 footer {
@@ -40,6 +66,20 @@ footer {
   align-items: center;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+
 .navbar {
   min-height: 70px;
   display: flex;
@@ -50,6 +90,7 @@ footer {
 }
 
 .nav-branding {
+  font-family: "Notable";
   font-size: 2rem;
 }
 
@@ -129,6 +170,9 @@ background-color: blueviolet;
   margin: 0;
 }
 
+.container {
+  width: 90%;
+}
 
 @media(max-width:900px) {
   .hamburger {
