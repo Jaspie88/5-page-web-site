@@ -6,7 +6,7 @@
 
 header {
   background-color: black;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,17 +41,14 @@ a {
   cursor: pointer;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: white;
-}
-
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 70px - 30px);
   width: 100%;
+  overflow-y: auto;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 
 footer {
@@ -138,7 +135,7 @@ background-color: blueviolet;
   display: block;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 70px - 30px);
+  height: 100%;
   width: 100%;
 }
 
@@ -174,7 +171,61 @@ background-color: blueviolet;
   width: 90%;
 }
 
-@media(max-width:900px) {
+.form-wrapper {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.form-row label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.form-group {
+  padding:10px;
+}
+
+.form-group-not-required {
+  padding:10px;
+  display: block;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  font-family: "Notable";
+  font-size: larger;
+}
+
+.submit-button:hover {
+  background-color: blueviolet;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid blueviolet;
+  color: white;
+  background: black;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+
+@media(max-width:1700px) {
   .hamburger {
     display: block;
   }
@@ -221,7 +272,13 @@ background-color: blueviolet;
 
 
 @media(max-width:400px) {
+  .nav-branding {
+    font-size: 1.5rem;
+  }
 	.opening-text {
 		font-size: 11vh;
 	}
+  .form-group-not-required {
+    display: none;
+  }
 }
