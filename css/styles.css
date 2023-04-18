@@ -25,20 +25,36 @@ h1{
   font-size: 4rem;
 }
 
-h1:hover{
- color: blueviolet; 
+h2  {
+  color: blueviolet;
 }
 
 p {
   padding: 10px;
   text-align: center;
-  font-size: medium;
+  font-size: large;
+}
+
+p span {
+  font-family: "Notable";
+  color: blueviolet;
+}
+
+p a {
+  color: blueviolet;
+  font-weight: bold;
 }
 
 a {
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-color: blueviolet;
 }
 
 section {
@@ -63,19 +79,43 @@ footer {
   align-items: center;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-align: relative;
 }
 
+label.required::after {
+  content:"*";
+  font-weight: bold;
+  color:red;
+  position:absolute;
+}
+
+input:focus-visible{
+  outline: none;
+}
+
+input:required:valid {
+  border: 2px solid blueviolet;
+}
+
+input:required:invalid {
+  border: 2px solid red;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 2px solid blueviolet;
+  color: white;
+  background: black;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
 
 .navbar {
   min-height: 70px;
@@ -100,11 +140,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .nav-link {
   transition: 0.3s ease-out;
-}
-
-a:hover {
-	text-decoration: underline;
-	text-decoration-color: blueviolet;
 }
 
 .nav-link:hover {
@@ -139,6 +174,20 @@ background-color: blueviolet;
   width: 100%;
 }
 
+.page-title {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  color: black;
+  text-align: left;
+  font-family: "Notable";
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.page-title span {
+  color: blueviolet;
+}
 
 .text-wrapper {
   position: relative;
@@ -167,11 +216,29 @@ background-color: blueviolet;
   margin: 0;
 }
 
+.card {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: blueviolet;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Notable', sans-serif;
+}
+
+.card img {
+  border-radius: 7px 7px 0 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .container {
   width: 90%;
 }
 
-.form-wrapper {
+.grid-container {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
   grid-gap: 20px;
@@ -186,10 +253,10 @@ background-color: blueviolet;
   justify-items: center;
 }
 
-.form-row label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 2px;
+.form-row-full-length {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .form-group {
@@ -210,20 +277,9 @@ background-color: blueviolet;
 
 .submit-button:hover {
   background-color: blueviolet;
+  color: black;
+  border-color: black;
 }
-
-input,
-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 20px;
-  border: 1px solid blueviolet;
-  color: white;
-  background: black;
-  border-radius: 9px;
-  box-sizing: border-box;
-}
-
 
 @media(max-width:1700px) {
   .hamburger {
@@ -268,8 +324,10 @@ select {
 	.opening-text {
 		font-size: 16vh;
 	}
+  .page-title { 
+    font-size: 2rem;
+  }
 }
-
 
 @media(max-width:400px) {
   .nav-branding {
@@ -278,7 +336,13 @@ select {
 	.opening-text {
 		font-size: 11vh;
 	}
+  .page-title { 
+    font-size: 1.5rem;
+  }
   .form-group-not-required {
+    display: none;
+  }
+  label {
     display: none;
   }
 }

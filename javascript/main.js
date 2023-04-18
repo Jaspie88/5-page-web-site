@@ -189,3 +189,4 @@ $(document).ready(function () {
 	classSelect.addEventListener('change', updateSessionOptions);
 	
 });
+
