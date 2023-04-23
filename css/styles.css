@@ -221,7 +221,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   text-align: center;
   padding-top: 90px;
   max-width: 100%;
-  background-image: url("/images/home.jpg");
+  background-image: url("/images/home.webp");
   background-size: cover;
   background-position: center;
   -webkit-background-clip: text;
@@ -352,6 +352,37 @@ input[type="datetime-local"]::-webkit-clear-button {
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-wrapper .video-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 15px;
+  border-style: solid;
+  border-color: blueviolet;
+  border-radius: 10px;
+  background-color: black;
+  transition: visibility 0.3s;
+}
+
+.tooltip-wrapper .video-tooltip iframe {
+  width: 560px;
+  height: 315px;
+  border-radius: 5px;
+}
+
+.tooltip-wrapper:hover .video-tooltip {
+  visibility: visible;
 }
 
 @media(max-width:1700px) {
