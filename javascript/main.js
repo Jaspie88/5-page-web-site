@@ -20,8 +20,7 @@ $(document).ready(function () {
 
 	// Get the current page's URL
 	const currentPageURL = window.location.href;
-
-	// Check if the current page's URL contains 'bookings.html'
+	// Check if the current page's URL contains 'bookings.html'; this avoides console errors on other pages.
 	if (currentPageURL.includes('bookings.html')) {
 		// FORM CHOICES SCRIPT
 		// Classes for each location
