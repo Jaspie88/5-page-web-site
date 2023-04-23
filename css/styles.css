@@ -285,12 +285,10 @@ input[type="datetime-local"]::-webkit-clear-button {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  grid-gap: 20px;
   justify-items: center;
 }
 
 .grid .card {
-  max-width: 380px;
   height: 600px;
 }
 
@@ -456,5 +454,15 @@ input[type="datetime-local"]::-webkit-clear-button {
 
   label {
     display: none;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .tooltip-wrapper .video-tooltip iframe {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
   }
 }
