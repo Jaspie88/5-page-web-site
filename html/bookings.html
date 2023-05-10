@@ -3,197 +3,202 @@
 <html lang="en">
 
 <head>
-  <title>ML Strength Health &amp; Fitness</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Notable">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/javascript/main.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  
+    <title>ML Strength Health &amp; Fitness</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Notable">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/javascript/main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
 </head>
 
 <body>
 
-  <header></header>
+    <header></header>
 
-  <section>
+    <section>
 
-    <div class="container">
+        <div class="container">
 
-      <h1><span>//</span>BOOK A CLASS<span>.</span></h1>
+            <h1><span>//</span>BOOK A CLASS<span>.</span></h1>
 
-      <div class="content">
+            <div class="content">
 
-        <div class="card">
-          <form>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="required" for="name">NAME</label>
-                <input type="text" id="name" placeholder="Your name.." required minlength="2">
-              </div>
+                <div class="card">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="required name-label" for="name">NAME</label>
+                                <input type="text" id="name" placeholder="Your name.." required minlength="2">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="required email-label" for="email">EMAIL</label>
+                                <input type="email" id="email" placeholder="Your email.." required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group-not-required">
+                                <label class="phone-label" for="phone">PHONE</label>
+                                <input type="tel" id="phone" placeholder="Your phone..">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="required location-label" for="location">LOCATION</label>
+                                <select id="location" required>
+                                    <option value="">// CHOOSE LOCATION</option>
+                                    <option value="Ashgrove">ASHGROVE</option>
+                                    <option value="BrisbaneCity">BRISBANE CITY</option>
+                                    <option value="Chermside">CHERMSIDE</option>
+                                    <option value="Graceville">GRACEVILLE</option>
+                                    <option value="Westlake">WESTLAKE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="required class-label" for="class">CLASS</label>
+                                <select id="class" required>
+                                    <option value="">// CHOOSE CLASS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="required session-label" for="session">SESSION</label>
+                                <select id="session" required>
+                                    <option value="">// CHOOSE SESSION</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input class="form-submit-button" type="submit" value="// BOOK">
+                            </div>
+                        </div>
+                        <div class="tooltip-wrapper">
+                            <p>Need <span class="tooltip-video">HELP</span>?</p>
+                            <div class="video-tooltip">
+                                <video src="/images/mp4/help.mp4" type="video/mp4" muted autoplay></video>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h2><span>//</span>REQUEST CLASS<span>.</span></h2>
+                        <p>DON'T SEE A CLASS YOU LIKE? Please <span>REQUEST</span> the desired class
+                            at your location.
+                        </p>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="required" for="location-request">LOCATION</label>
+                                    <select id="location-request" required>
+                                        <option value="">// CHOOSE LOCATION</option>
+                                        <option value="Ashgrove">ASHGROVE</option>
+                                        <option value="BrisbaneCity">BRISBANE CITY</option>
+                                        <option value="Chermside">CHERMSIDE</option>
+                                        <option value="Graceville">GRACEVILLE</option>
+                                        <option value="Westlake">WESTLAKE</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="required" for="class-request">CLASS</label>
+                                    <select id="class-request" required>
+                                        <option value="">// CHOOSE CLASS</option>
+                                        <option value="body-attack">Body Attack</option>
+                                        <option value="zumba">Zumba</option>
+                                        <option value="body-pump">Body Pump</option>
+                                        <option value="body-balance">Body Balance</option>
+                                        <option value="body-combat">Body Combat</option>
+                                        <option value="body-jam">Body Jam</option>
+                                        <option value="body-vive">Body Vive</option>
+                                        <option value="cycle">Cycle</option>
+                                        <option value="pilates">Pilates</option>
+                                        <option value="yoga">Yoga</option>
+                                        <option value="aqua">Aqua Fit & Aqua Mode</option>
+                                        <option value="boxing">Boxing & TAE Box</option>
+                                        <option value="step">Step Moves, Step Basic & Step Burner</option>
+                                        <option value="gentle">Rejuvenate, Low Impact & Gentle Fitness</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="request-date">WHEN
+                                        <span class="tooltip">
+                                            <em class="fas fa-question-circle"></em>
+                                            <span class="tooltip-text">What time works for you? We'll do our
+                                                best.</span>
+                                        </span>
+                                    </label>
+                                    <input type="datetime-local" id="request-date">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input class="form-submit-button" type="submit" value="// REQUEST">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card">
+                        <h2><span>//</span>REQUEST CALL<span>.</span></h2>
+                        <p>THINKING ABOUT JOINING? One of our team can <span>CALL YOU</span> anytime you like.</p>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="required" for="call-name">NAME</label>
+                                    <input type="text" id="call-name" placeholder="Your name.." required minlength="2">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="required" for="call-phone">PHONE</label>
+                                    <input type="tel" id="call-phone" placeholder="Your phone.." required minlength="8"
+                                        maxlength="10">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="call-date">WHEN
+                                        <span class="tooltip">
+                                            <em class="fas fa-question-circle"></em>
+                                            <span class="tooltip-text">What time would you like to be called?</span>
+                                        </span>
+                                    </label>
+                                    <input type="datetime-local" id="call-date">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input class="form-submit-button" type="submit" value="// CALLBACK">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="required" for="email">EMAIL</label>
-                <input type="email" id="email" placeholder="Your email.." required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group-not-required">
-                <label for="phone">PHONE</label>
-                <input type="tel" id="phone" placeholder="Your phone..">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="required" for="location">LOCATION</label>
-                <select id="location" required>
-                  <option value="">// CHOOSE LOCATION</option>
-                  <option value="Ashgrove">ASHGROVE</option>
-                  <option value="BrisbaneCity">BRISBANE CITY</option>
-                  <option value="Chermside">CHERMSIDE</option>
-                  <option value="Graceville">GRACEVILLE</option>
-                  <option value="Westlake">WESTLAKE</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="required" for="class">CLASS</label>
-                <select id="class" required>
-                  <option value="">// CHOOSE CLASS</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="required" for="session">SESSION</label>
-                <select id="session" required>
-                  <option value="">// CHOOSE SESSION</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <input class="form-submit-button" type="submit" value="// BOOK">
-              </div>
-            </div>
-          </form>
+
         </div>
 
-        <div class="grid">
-          
-          <div class="card">
-            <h2><span>//</span>REQUEST CLASS<span>.</span></h2>
-            <p>DON'T SEE A CLASS YOU LIKE? Please <span>REQUEST</span> the desired class
-              at your location.
-            </p>
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="required" for="location-request">LOCATION</label>
-                  <select id="location-request" required>
-                    <option value="">// CHOOSE LOCATION</option>
-                    <option value="Ashgrove">ASHGROVE</option>
-                    <option value="BrisbaneCity">BRISBANE CITY</option>
-                    <option value="Chermside">CHERMSIDE</option>
-                    <option value="Graceville">GRACEVILLE</option>
-                    <option value="Westlake">WESTLAKE</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="required" for="class-request">CLASS</label>
-                  <select id="class-request" required>
-                    <option value="">// CHOOSE CLASS</option>
-                    <option value="body-attack">Body Attack</option>
-                    <option value="zumba">Zumba</option>
-                    <option value="body-pump">Body Pump</option>
-                    <option value="body-balance">Body Balance</option>
-                    <option value="body-combat">Body Combat</option>
-                    <option value="body-jam">Body Jam</option>
-                    <option value="body-vive">Body Vive</option>
-                    <option value="cycle">Cycle</option>
-                    <option value="pilates">Pilates</option>
-                    <option value="yoga">Yoga</option>
-                    <option value="aqua">Aqua Fit & Aqua Mode</option>
-                    <option value="boxing">Boxing & TAE Box</option>
-                    <option value="step">Step Moves, Step Basic & Step Burner</option>
-                    <option value="gentle">Rejuvenate, Low Impact & Gentle Fitness</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="request-date">WHEN
-                    <span class="tooltip">
-                      <em class="fas fa-question-circle"></em>
-                      <span class="tooltip-text">What time works for you? We'll do our best.</span>
-                    </span>
-                  </label>
-                  <input type="datetime-local" id="request-date">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <input class="form-submit-button" type="submit" value="// REQUEST">
-                </div>
-              </div>
-            </form>
-          </div>
+    </section>
 
-          <div class="card">
-            <h2><span>//</span>REQUEST CALL<span>.</span></h2>
-            <p>THINKING ABOUT JOINING? One of our team can <span>CALL YOU</span> anytime you like.</p>
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="required" for="call-name">NAME</label>
-                  <input type="text" id="call-name" placeholder="Your name.." required minlength="2">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="required" for="call-phone">PHONE</label>
-                  <input type="tel" id="call-phone" placeholder="Your phone.." required minlength="8" maxlength="10">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="call-date">WHEN
-                    <span class="tooltip">
-                      <em class="fas fa-question-circle"></em>
-                      <span class="tooltip-text">What time would you like to be called?</span>
-                    </span>
-                  </label>
-                  <input type="datetime-local" id="call-date">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <input class="form-submit-button" type="submit" value="// CALLBACK">
-                </div>
-              </div>
-            </form>
-          </div>
-
-        </div>
-        
-
-        
-
-        
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer></footer>
+    <footer></footer>
 
 </body>
 
